@@ -270,7 +270,7 @@ Identify and stop the process that's listening on port 8090 or configure this ap
 24-02-27.14:44:15.533 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
 24-02-27.14:44:15.613 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
 24-02-27.14:44:15.613 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 609 ms
-24-02-27.14:44:15.645 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatGPTAIServiceController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.bugstack.chatgpt.data.domain.openai.service.IChatService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+24-02-27.14:44:15.645 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chatGPTAIServiceController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'IChatService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
 24-02-27.14:44:15.647 [main            ] INFO  StandardService        - Stopping service [Tomcat]
 24-02-27.14:44:15.654 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
 
@@ -283,12 +283,12 @@ APPLICATION FAILED TO START
 
 Description:
 
-A component required a bean of type 'cn.bugstack.chatgpt.data.domain.openai.service.IChatService' that could not be found.
+A component required a bean of type 'IChatService' that could not be found.
 
 
 Action:
 
-Consider defining a bean of type 'cn.bugstack.chatgpt.data.domain.openai.service.IChatService' in your configuration.
+Consider defining a bean of type 'IChatService' in your configuration.
 
 24-02-27.14:44:28.925 [main            ] INFO  Application            - Starting Application using Java 1.8.0_312 on LAPTOP-G7B86673 with PID 6552 (D:\Study\XFG\ChatGPT\chatgpt-data\chatgpt-data-app\target\classes started by Crumbled in D:\Study\XFG\ChatGPT\chatgpt-data)
 24-02-27.14:44:28.927 [main            ] INFO  Application            - The following 1 profile is active: "dev"
@@ -308,3 +308,242 @@ Consider defining a bean of type 'cn.bugstack.chatgpt.data.domain.openai.service
 24-02-27.14:44:56.989 [http-nio-8090-exec-4] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
 24-02-27.14:44:57.496 [http-nio-8090-exec-7] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
 24-02-27.14:44:57.821 [http-nio-8090-exec-6] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+24-02-27.16:08:27.556 [main            ] INFO  Application            - Starting Application using Java 1.8.0_312 on LAPTOP-G7B86673 with PID 25588 (D:\Study\XFG\ChatGPT\chatgpt-data\chatgpt-data-app\target\classes started by Crumbled in D:\Study\XFG\ChatGPT\chatgpt-data)
+24-02-27.16:08:27.558 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-02-27.16:08:28.376 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-02-27.16:08:28.382 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-02-27.16:08:28.383 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-02-27.16:08:28.383 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-02-27.16:08:28.469 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-02-27.16:08:28.469 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 882 ms
+24-02-27.16:08:28.716 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'weiXinPortalController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'cn.bugstack.chatgpt.data.domain.weixin.service.IWeiXinValidateService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+24-02-27.16:08:28.717 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+24-02-27.16:08:28.725 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+24-02-27.16:08:28.742 [main            ] ERROR LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'cn.bugstack.chatgpt.data.domain.weixin.service.IWeiXinValidateService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'cn.bugstack.chatgpt.data.domain.weixin.service.IWeiXinValidateService' in your configuration.
+
+24-02-27.16:09:23.923 [main            ] INFO  Application            - Starting Application using Java 1.8.0_312 on LAPTOP-G7B86673 with PID 23652 (D:\Study\XFG\ChatGPT\chatgpt-data\chatgpt-data-app\target\classes started by Crumbled in D:\Study\XFG\ChatGPT\chatgpt-data)
+24-02-27.16:09:23.924 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-02-27.16:09:24.502 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-02-27.16:09:24.507 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-02-27.16:09:24.507 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-02-27.16:09:24.507 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-02-27.16:09:24.591 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-02-27.16:09:24.591 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 641 ms
+24-02-27.16:09:25.006 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-02-27.16:09:25.018 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-02-27.16:09:25.024 [main            ] INFO  Application            - Started Application in 1.424 seconds (JVM running for 2.184)
+24-02-27.16:09:50.843 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-02-27.16:09:50.843 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-02-27.16:09:50.844 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 1 ms
+24-02-27.16:10:22.383 [main            ] INFO  Application            - Starting Application using Java 1.8.0_312 on LAPTOP-G7B86673 with PID 21260 (D:\Study\XFG\ChatGPT\chatgpt-data\chatgpt-data-app\target\classes started by Crumbled in D:\Study\XFG\ChatGPT\chatgpt-data)
+24-02-27.16:10:22.385 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-02-27.16:10:22.975 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-02-27.16:10:22.980 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-02-27.16:10:22.981 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-02-27.16:10:22.981 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-02-27.16:10:23.066 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-02-27.16:10:23.066 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 653 ms
+24-02-27.16:10:23.503 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-02-27.16:10:23.514 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-02-27.16:10:23.520 [main            ] INFO  Application            - Started Application in 1.462 seconds (JVM running for 2.226)
+24-02-27.16:10:28.347 [http-nio-8090-exec-1] INFO  [/]                    - Initializing Spring DispatcherServlet 'dispatcherServlet'
+24-02-27.16:10:28.347 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Initializing Servlet 'dispatcherServlet'
+24-02-27.16:10:28.347 [http-nio-8090-exec-1] INFO  DispatcherServlet      - Completed initialization in 0 ms
+24-02-27.16:10:28.361 [http-nio-8090-exec-1] WARN  DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+24-02-27.16:17:45.032 [main            ] INFO  Application            - Starting Application using Java 1.8.0_312 on LAPTOP-G7B86673 with PID 12360 (D:\Study\XFG\ChatGPT\chatgpt-data\chatgpt-data-app\target\classes started by Crumbled in D:\Study\XFG\ChatGPT\chatgpt-data)
+24-02-27.16:17:45.034 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-02-27.16:17:45.606 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-02-27.16:17:45.611 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-02-27.16:17:45.611 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-02-27.16:17:45.611 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-02-27.16:17:45.692 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-02-27.16:17:45.692 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 633 ms
+24-02-27.16:17:46.034 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'weiXinPortalController' method 
+cn.bugstack.chatgpt.data.trigger.http.WeiXinPortalController#validate(String, String, String, String, String)
+to {GET [/], produces [text/plain;charset=utf-8]}: There is already 'jazkx' bean method
+cn.bugstack.chatgpt.data.controller.XXXXXController#validate() mapped.
+24-02-27.16:17:46.036 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+24-02-27.16:17:46.043 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+24-02-27.16:17:46.056 [main            ] ERROR SpringApplication      - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'weiXinPortalController' method 
+cn.bugstack.chatgpt.data.trigger.http.WeiXinPortalController#validate(String, String, String, String, String)
+to {GET [/], produces [text/plain;charset=utf-8]}: There is already 'jazkx' bean method
+cn.bugstack.chatgpt.data.controller.XXXXXController#validate() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at cn.bugstack.chatgpt.data.Application.main(Application.java:18)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'weiXinPortalController' method 
+cn.bugstack.chatgpt.data.trigger.http.WeiXinPortalController#validate(String, String, String, String, String)
+to {GET [/], produces [text/plain;charset=utf-8]}: There is already 'jazkx' bean method
+cn.bugstack.chatgpt.data.controller.XXXXXController#validate() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 16 common frames omitted
+24-02-27.16:18:51.979 [main            ] INFO  Application            - Starting Application using Java 1.8.0_312 on LAPTOP-G7B86673 with PID 16252 (D:\Study\XFG\ChatGPT\chatgpt-data\chatgpt-data-app\target\classes started by Crumbled in D:\Study\XFG\ChatGPT\chatgpt-data)
+24-02-27.16:18:51.981 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-02-27.16:18:52.550 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-02-27.16:18:52.555 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-02-27.16:18:52.556 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-02-27.16:18:52.556 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-02-27.16:18:52.637 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-02-27.16:18:52.637 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 630 ms
+24-02-27.16:18:52.986 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'weiXinPortalController' method 
+cn.bugstack.chatgpt.data.trigger.http.WeiXinPortalController#validate(String, String, String, String, String)
+to {GET [/], produces [text/plain;charset=utf-8]}: There is already 'XXXXController' bean method
+cn.bugstack.chatgpt.data.controller.XXXXController#validate() mapped.
+24-02-27.16:18:52.987 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+24-02-27.16:18:52.994 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+24-02-27.16:18:53.009 [main            ] ERROR SpringApplication      - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'weiXinPortalController' method 
+cn.bugstack.chatgpt.data.trigger.http.WeiXinPortalController#validate(String, String, String, String, String)
+to {GET [/], produces [text/plain;charset=utf-8]}: There is already 'XXXXController' bean method
+cn.bugstack.chatgpt.data.controller.XXXXController#validate() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at cn.bugstack.chatgpt.data.Application.main(Application.java:17)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'weiXinPortalController' method 
+cn.bugstack.chatgpt.data.trigger.http.WeiXinPortalController#validate(String, String, String, String, String)
+to {GET [/], produces [text/plain;charset=utf-8]}: There is already 'XXXXController' bean method
+cn.bugstack.chatgpt.data.controller.XXXXController#validate() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 16 common frames omitted
+24-02-27.16:19:37.982 [main            ] INFO  Application            - Starting Application using Java 1.8.0_312 on LAPTOP-G7B86673 with PID 5940 (D:\Study\XFG\ChatGPT\chatgpt-data\chatgpt-data-app\target\classes started by Crumbled in D:\Study\XFG\ChatGPT\chatgpt-data)
+24-02-27.16:19:37.983 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-02-27.16:19:38.555 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-02-27.16:19:38.560 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-02-27.16:19:38.560 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-02-27.16:19:38.560 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-02-27.16:19:38.641 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-02-27.16:19:38.641 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 633 ms
+24-02-27.16:19:38.989 [main            ] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'weiXinPortalController' method 
+cn.bugstack.chatgpt.data.trigger.http.WeiXinPortalController#validate(String, String, String, String, String)
+to {GET [/], produces [text/plain;charset=utf-8]}: There is already 'XXXXController' bean method
+cn.bugstack.chatgpt.data.controller.XXXXController#validate() mapped.
+24-02-27.16:19:38.991 [main            ] INFO  StandardService        - Stopping service [Tomcat]
+24-02-27.16:19:38.998 [main            ] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+24-02-27.16:19:39.012 [main            ] ERROR SpringApplication      - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'weiXinPortalController' method 
+cn.bugstack.chatgpt.data.trigger.http.WeiXinPortalController#validate(String, String, String, String, String)
+to {GET [/], produces [text/plain;charset=utf-8]}: There is already 'XXXXController' bean method
+cn.bugstack.chatgpt.data.controller.XXXXController#validate() mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at cn.bugstack.chatgpt.data.Application.main(Application.java:17)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'weiXinPortalController' method 
+cn.bugstack.chatgpt.data.trigger.http.WeiXinPortalController#validate(String, String, String, String, String)
+to {GET [/], produces [text/plain;charset=utf-8]}: There is already 'XXXXController' bean method
+cn.bugstack.chatgpt.data.controller.XXXXController#validate() mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.util.LinkedHashMap.forEach(LinkedHashMap.java:684)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 16 common frames omitted
+24-02-27.16:19:50.179 [main            ] INFO  Application            - Starting Application using Java 1.8.0_312 on LAPTOP-G7B86673 with PID 24004 (D:\Study\XFG\ChatGPT\chatgpt-data\chatgpt-data-app\target\classes started by Crumbled in D:\Study\XFG\ChatGPT\chatgpt-data)
+24-02-27.16:19:50.181 [main            ] INFO  Application            - The following 1 profile is active: "dev"
+24-02-27.16:19:50.752 [main            ] INFO  TomcatWebServer        - Tomcat initialized with port(s): 8090 (http)
+24-02-27.16:19:50.757 [main            ] INFO  Http11NioProtocol      - Initializing ProtocolHandler ["http-nio-8090"]
+24-02-27.16:19:50.758 [main            ] INFO  StandardService        - Starting service [Tomcat]
+24-02-27.16:19:50.758 [main            ] INFO  StandardEngine         - Starting Servlet engine: [Apache Tomcat/9.0.75]
+24-02-27.16:19:50.838 [main            ] INFO  [/]                    - Initializing Spring embedded WebApplicationContext
+24-02-27.16:19:50.839 [main            ] INFO  ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 633 ms
+24-02-27.16:19:51.235 [main            ] INFO  Http11NioProtocol      - Starting ProtocolHandler ["http-nio-8090"]
+24-02-27.16:19:51.246 [main            ] INFO  TomcatWebServer        - Tomcat started on port(s): 8090 (http) with context path ''
+24-02-27.16:19:51.252 [main            ] INFO  Application            - Started Application in 1.396 seconds (JVM running for 2.161)
